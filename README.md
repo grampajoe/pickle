@@ -1,6 +1,8 @@
 # WHAT
 Pick the Pickle is a game about catching pickles and not getting stabbed in the jar by knives.
 
+This is a quick C++ rewrite of https://github.com/grampajoe/pickle-python, and it's definitely full of bugs and stuff.
+
 # HOW
 The objective is to fill the jars with pickles before they're broken by the falling knives. Why are there falling knives? I don't know, why are there falling pickles?
 
