@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="50"
+   height="100"
+   id="svg3848"
+   version="1.1"
+   inkscape:version="0.48.1 r9760"
+   inkscape:export-filename="/home/grampa/stuff/pickle/images/pickle.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"
+   sodipodi:docname="New document 4">
+  <defs
+     id="defs3850">
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3987"
+       id="linearGradient3985"
+       x1="348.651"
+       y1="212.89375"
+       x2="349.09061"
+       y2="466.44205"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.37825048,0,0,0.38200188,-57.337283,19.605835)" />
+    <linearGradient
+       id="linearGradient3987">
+      <stop
+         id="stop3989"
+         offset="0"
+         style="stop-color:#00b100;stop-opacity:1;" />
+      <stop
+         style="stop-color:#008d00;stop-opacity:1;"
+         offset="0.26867437"
+         id="stop3991" />
+      <stop
+         style="stop-color:#007600;stop-opacity:1;"
+         offset="0.79312372"
+         id="stop3993" />
+      <stop
+         id="stop3995"
+         offset="1"
+         style="stop-color:#00a900;stop-opacity:1;" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3967"
+       id="linearGradient4060"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.37825047,0,0,0.37529686,196.63492,281.53831)"
+       x1="348.75653"
+       y1="209.64139"
+       x2="339.02267"
+       y2="467.23029" />
+    <linearGradient
+       id="linearGradient3967">
+      <stop
+         style="stop-color:#00c000;stop-opacity:1;"
+         offset="0"
+         id="stop3969" />
+      <stop
+         id="stop3977"
+         offset="0.26867437"
+         style="stop-color:#009900;stop-opacity:1;" />
+      <stop
+         id="stop3975"
+         offset="0.79312372"
+         style="stop-color:#008900;stop-opacity:1;" />
+      <stop
+         style="stop-color:#00b100;stop-opacity:1;"
+         offset="1"
+         id="stop3971" />
+    </linearGradient>
+    <linearGradient
+       y2="467.23029"
+       x2="339.02267"
+       y1="209.64139"
+       x1="348.75653"
+       gradientTransform="matrix(0.37825047,0,0,0.37529686,-57.337273,21.538305)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3846"
+       xlink:href="#linearGradient3967"
+       inkscape:collect="always" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.959798"
+     inkscape:cx="48.634266"
+     inkscape:cy="51.864409"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1024"
+     inkscape:window-height="576"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3853">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-52.137871,-99.5)">
+    <path
+       style="color:#000000;fill:url(#linearGradient3846);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 75.906757,100.49996 c 12.27724,0 19.23846,10.20926 22.16124,22.25895 4.851683,20.00289 3.229033,37.1027 0,53.48213 -2.39403,12.14312 -9.884,22.25895 -22.16124,22.25895 -12.27739,0 -25.81816,-10.37156 -22.1614,-22.25895 4.03657,-13.12153 6.06468,-28.58436 0,-53.48213 -2.93453,-12.04738 9.88401,-22.25895 22.1614,-22.25895 z"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssss"
+       inkscape:export-filename="/home/grampa/stuff/pickle/images/pickle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       id="path3020" />
+    <path
+       style="opacity:0.5390625;color:#000000;fill:none;stroke:url(#linearGradient3985);stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 75.906757,198.03417 c -10.26752,-8.07203 -9.77136,-21.83784 -6.49564,-36.37762 6.16126,-27.34763 -10.79444,-44.55711 4.20299,-60.58557"
+       id="rect2987-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="/home/grampa/stuff/pickle/images/pickle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:type="arc"
+       style="color:#000000;fill:none;stroke:#007900;stroke-width:5.30826664;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="path3813"
+       sodipodi:cx="373.25137"
+       sodipodi:cy="257.8772"
+       sodipodi:rx="9.5964489"
+       sodipodi:ry="9.5964489"
+       d="M 382.84782,257.8772 A 9.5964489,9.5964489 0 1 1 363.7045,256.90303"
+       sodipodi:start="0"
+       sodipodi:end="3.2432815"
+       sodipodi:open="true"
+       transform="matrix(-0.35144232,-0.1387713,0.13986346,-0.34869794,181.02553,266.19073)"
+       inkscape:export-filename="/home/grampa/stuff/pickle/images/pickle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:type="arc"
+       style="color:#000000;fill:none;stroke:#007900;stroke-width:6.56986666;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="path3813-6"
+       sodipodi:cx="373.25137"
+       sodipodi:cy="257.8772"
+       sodipodi:rx="9.5964489"
+       sodipodi:ry="9.5964489"
+       d="M 382.84782,257.8772 A 9.5964489,9.5964489 0 1 1 363.7045,256.90303"
+       sodipodi:start="0"
+       sodipodi:end="3.2432815"
+       sodipodi:open="true"
+       transform="matrix(-0.20538979,0.22454246,-0.22630959,-0.20378591,200.12987,127.76933)"
+       inkscape:export-filename="/home/grampa/stuff/pickle/images/pickle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:type="arc"
+       style="color:#000000;fill:none;stroke:#007900;stroke-width:5.22129536;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="path3813-6-5"
+       sodipodi:cx="373.25137"
+       sodipodi:cy="257.8772"
+       sodipodi:rx="9.5964489"
+       sodipodi:ry="9.5964489"
+       d="M 382.84782,257.8772 A 9.5964489,9.5964489 0 1 1 363.7045,256.90303"
+       sodipodi:start="0"
+       sodipodi:end="3.2432815"
+       sodipodi:open="true"
+       transform="matrix(0.25475619,-0.28581108,0.28806047,0.25276684,-86.038173,203.87186)"
+       inkscape:export-filename="/home/grampa/stuff/pickle/images/pickle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:type="arc"
+       style="color:#000000;fill:none;stroke:#007900;stroke-width:8.10698414;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="path3813-6-5-8"
+       sodipodi:cx="373.25137"
+       sodipodi:cy="257.8772"
+       sodipodi:rx="9.5964489"
+       sodipodi:ry="9.5964489"
+       d="M 382.84782,257.8772 A 9.5964489,9.5964489 0 1 1 363.7045,256.90303"
+       sodipodi:start="0"
+       sodipodi:end="3.2432815"
+       sodipodi:open="true"
+       transform="matrix(-0.20160879,-0.1427315,0.14385478,-0.20003444,121.73184,249.83232)"
+       inkscape:export-filename="/home/grampa/stuff/pickle/images/pickle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:type="arc"
+       style="color:#000000;fill:none;stroke:#007900;stroke-width:6.59416628;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="path3813-6-5-4"
+       sodipodi:cx="373.25137"
+       sodipodi:cy="257.8772"
+       sodipodi:rx="9.5964489"
+       sodipodi:ry="9.5964489"
+       d="M 382.84782,257.8772 A 9.5964489,9.5964489 0 1 1 363.7045,256.90303"
+       sodipodi:start="0"
+       sodipodi:end="3.2432815"
+       sodipodi:open="true"
+       transform="matrix(-0.07424524,0.27668151,-0.31497482,-0.06521886,176.10292,60.379125)"
+       inkscape:export-filename="/home/grampa/stuff/pickle/images/pickle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:type="arc"
+       style="color:#000000;fill:none;stroke:#007900;stroke-width:6.57676029;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="path3813-6-5-2"
+       sodipodi:cx="373.25137"
+       sodipodi:cy="257.8772"
+       sodipodi:rx="9.5964489"
+       sodipodi:ry="9.5964489"
+       d="M 382.84782,257.8772 A 9.5964489,9.5964489 0 1 1 363.7045,256.90303"
+       sodipodi:start="0"
+       sodipodi:end="3.2432815"
+       sodipodi:open="true"
+       transform="matrix(0.29487644,-0.07845955,0.07907696,0.29257383,-45.706403,129.40534)"
+       inkscape:export-filename="/home/grampa/stuff/pickle/images/pickle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:type="arc"
+       style="color:#000000;fill:none;stroke:#007900;stroke-width:6.48241711;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="path3813-6-5-44"
+       sodipodi:cx="373.25137"
+       sodipodi:cy="257.8772"
+       sodipodi:rx="9.5964489"
+       sodipodi:ry="9.5964489"
+       d="M 382.84782,257.8772 A 9.5964489,9.5964489 0 1 1 363.7045,256.90303"
+       sodipodi:start="0"
+       sodipodi:end="3.2432815"
+       sodipodi:open="true"
+       transform="matrix(0.18348536,0.24759325,-0.24954183,0.1820525,60.150787,35.726605)"
+       inkscape:export-filename="/home/grampa/stuff/pickle/images/pickle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:type="arc"
+       style="color:#000000;fill:none;stroke:#007900;stroke-width:7.81041193;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="path3813-2"
+       sodipodi:cx="373.25137"
+       sodipodi:cy="257.8772"
+       sodipodi:rx="9.5964489"
+       sodipodi:ry="9.5964489"
+       d="M 382.84782,257.8772 A 9.5964489,9.5964489 0 1 1 363.7045,256.90303"
+       sodipodi:start="0"
+       sodipodi:end="3.2432815"
+       sodipodi:open="true"
+       transform="matrix(-0.22657507,0.12050462,-0.12145295,-0.22480588,187.91783,147.43128)"
+       inkscape:transform-center-y="2.2873036"
+       inkscape:export-filename="/home/grampa/stuff/pickle/images/pickle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="color:#000000;fill:none;stroke:#003c00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 75.911327,100.49998 c 12.27971,0 19.24233,10.20926 22.16569,22.25894 4.852683,20.00289 3.229703,37.10271 0,53.48213 -2.39449,12.14311 -9.88598,22.25895 -22.16569,22.25895 -12.27985,0 -25.82333,-10.37156 -22.16584,-22.25895 4.03739,-13.12152 6.06591,-28.58436 0,-53.48213 -2.93512,-12.04737 9.88599,-22.25894 22.16584,-22.25894 z"
+       id="rect2987"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssss"
+       inkscape:export-filename="/home/grampa/stuff/pickle/images/pickle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:type="arc"
+       style="color:#000000;fill:none;stroke:#007900;stroke-width:6.69350004;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="path3813-3"
+       sodipodi:cx="373.25137"
+       sodipodi:cy="257.8772"
+       sodipodi:rx="9.5964489"
+       sodipodi:ry="9.5964489"
+       d="M 382.84782,257.8772 A 9.5964489,9.5964489 0 1 1 363.7045,256.90303"
+       sodipodi:start="0"
+       sodipodi:end="3.2432815"
+       sodipodi:open="true"
+       transform="matrix(-0.0694002,-0.28400651,0.29820731,-0.0660953,46.577107,274.96963)"
+       inkscape:export-filename="/home/grampa/stuff/pickle/images/pickle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:type="arc"
+       style="color:#000000;fill:none;stroke:#007900;stroke-width:7.26244974;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="path3813-0"
+       sodipodi:cx="373.25137"
+       sodipodi:cy="257.8772"
+       sodipodi:rx="9.5964489"
+       sodipodi:ry="9.5964489"
+       d="M 382.84782,257.8772 A 9.5964489,9.5964489 0 1 1 363.7045,256.90303"
+       sodipodi:start="0"
+       sodipodi:end="3.2432815"
+       sodipodi:open="true"
+       transform="matrix(-0.04533554,0.27059869,-0.27272833,-0.04498154,147.34882,50.180955)"
+       inkscape:export-filename="/home/grampa/stuff/pickle/images/pickle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+  </g>
+</svg>

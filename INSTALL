@@ -1,0 +1,15 @@
+Prerequisites:
+	OpenGL
+	SDL
+	SDL_ttf
+	SDL_image
+
+Installation on Linux:
+	$ make
+	$ make install
+
+To install to a custom location, set the PREFIX and MEDIA_PREFIX environment variables. MEDIA_PREFIX is relative to PREFIX. In bash:
+	$ export PREFIX=/path/to/game
+	$ export MEDIA_PREFIX=/media/path
+
+The executable would then be found in /path/to/game/bin/, and media files like fonts and images would be in /path/to/game/media/path/.

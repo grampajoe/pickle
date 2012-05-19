@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="35"
+   height="200"
+   id="svg3971"
+   version="1.1"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="knife.svg"
+   inkscape:export-filename="/home/grampa/stuff/pickle/images/knife.png"
+   inkscape:export-xdpi="45"
+   inkscape:export-ydpi="45">
+  <defs
+     id="defs3973">
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4092"
+       id="linearGradient4098"
+       x1="548.75299"
+       y1="287"
+       x2="588.61005"
+       y2="107"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.54151031,0,0,-0.64169381,-142.68595,822.93158)" />
+    <linearGradient
+       id="linearGradient4092">
+      <stop
+         style="stop-color:#d4d4d4;stop-opacity:1;"
+         offset="0"
+         id="stop4094" />
+      <stop
+         style="stop-color:#f3f3f3;stop-opacity:1;"
+         offset="1"
+         id="stop4096" />
+    </linearGradient>
+    <linearGradient
+       y2="107"
+       x2="588.61005"
+       y1="287"
+       x1="548.75299"
+       gradientTransform="matrix(0.55719722,0,0,-0.63843659,125.57371,650.34449)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3969"
+       xlink:href="#linearGradient4092"
+       inkscape:collect="always" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="89.085799"
+     inkscape:cy="87.916617"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1024"
+     inkscape:window-height="576"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3976">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-425.78182,-395.70442)">
+    <path
+       style="color:#000000;fill:url(#linearGradient3969);fill-opacity:1;stroke:#d1d1d1;stroke-width:5.00000048;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 458.28179,593.20442 0,-135.987 -28.41705,1.91533 c -0.34652,29.95876 -11.07302,107.25734 28.41705,134.07167 z"
+       id="rect4064"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="/home/grampa/stuff/pickle/images/knife.png"
+       inkscape:export-xdpi="44.779312"
+       inkscape:export-ydpi="44.779312" />
+    <rect
+       style="color:#000000;fill:#ce955f;fill-opacity:1;stroke:#77512b;stroke-width:3;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect4062"
+       width="19.854452"
+       height="74.697083"
+       x="438.42731"
+       y="-471.90152"
+       rx="4.4832635"
+       ry="15.079431"
+       inkscape:export-filename="/home/grampa/stuff/pickle/images/knife.png"
+       inkscape:export-xdpi="44.779312"
+       inkscape:export-ydpi="44.779312"
+       transform="scale(1,-1)" />
+    <path
+       sodipodi:type="arc"
+       style="color:#000000;fill:#969696;fill-opacity:1;stroke:#626262;stroke-width:4.69152737;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="path4067"
+       sodipodi:cx="171"
+       sodipodi:cy="560"
+       sodipodi:rx="7"
+       sodipodi:ry="7"
+       d="m 178,560 a 7,7 0 1 1 -14,0 7,7 0 1 1 14,0 z"
+       transform="matrix(0.64046615,0,0,-0.63843659,338.83481,821.12628)"
+       inkscape:export-filename="/home/grampa/stuff/pickle/images/knife.png"
+       inkscape:export-xdpi="44.779312"
+       inkscape:export-ydpi="44.779312" />
+    <path
+       sodipodi:type="arc"
+       style="color:#000000;fill:#969696;fill-opacity:1;stroke:#626262;stroke-width:4.69152737;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="path4067-2"
+       sodipodi:cx="171"
+       sodipodi:cy="560"
+       sodipodi:rx="7"
+       sodipodi:ry="7"
+       d="m 178,560 a 7,7 0 1 1 -14,0 7,7 0 1 1 14,0 z"
+       transform="matrix(0.64046615,0,0,-0.63843659,338.83481,763.66699)"
+       inkscape:export-filename="/home/grampa/stuff/pickle/images/knife.png"
+       inkscape:export-xdpi="44.779312"
+       inkscape:export-ydpi="44.779312" />
+  </g>
+</svg>
