@@ -54,6 +54,7 @@ texture* Sprite::texture_from_surface(SDL_Surface* src)
 {
 	texture* new_tex = (texture*)malloc(sizeof(texture));
 	GLenum format, type;
+	Uint32 mask_test;
 
 	SDL_Surface* surface = SDL_DisplayFormatAlpha(src);
 
@@ -83,23 +84,31 @@ texture* Sprite::texture_from_surface(SDL_Surface* src)
 
 	if (surface->format->BytesPerPixel == 4)
 	{
-		if (surface->format->Rmask == 0x000000ff)
+		if (surface->format->Amask == 0xff000000)
+		{
+			type = GL_UNSIGNED_INT_8_8_8_8_REV;
+			mask_test = 0x000000ff;
+		}
+		else
+		{
+			type = GL_UNSIGNED_INT_8_8_8_8;
+			mask_test = 0xff000000;
+		}
+
+		if (surface->format->Rmask == mask_test)
 			format = GL_RGBA;
 		else
 			format = GL_BGRA;
 	}
 	else
 	{
+		type = GL_UNSIGNED_INT_8_8_8_8;
+
 		if (surface->format->Rmask == 0x000000ff)
 			format = GL_RGB;
 		else
 			format = GL_BGR;
 	}
-
-	if (SDL_BYTEORDER == SDL_BIG_ENDIAN)
-		type = GL_UNSIGNED_INT_8_8_8_8;
-	else
-		type = GL_UNSIGNED_INT_8_8_8_8_REV;
 
 	glTexImage2D(GL_TEXTURE_2D, 0, surface->format->BytesPerPixel, surface->w,
 			surface->h, 0, format, type,
