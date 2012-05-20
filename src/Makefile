@@ -7,7 +7,11 @@ DEPS      := $(subst .o,.d,$(OBJECTS))
 BINARY    := pickle
 UNAME     := $(shell uname)
 CXXFLAGS  += -DPREFIX=\"$(PREFIX)\" -DMEDIA_PREFIX=\"$(MEDIA_PREFIX)\" -ggdb3 -Wall `sdl-config --cflags`
-LDLIBS    := -lSDL_image -lSDL_ttf -lGL `sdl-config --libs`
+LDLIBS    := -lstdc++ -lSDL_image -lSDL_ttf -lGL `sdl-config --libs`
+
+ifeq ($(UNAME),Darwin)
+	LDLIBS += -L/System/Library/Frameworks/OpenGL.framework/Libraries/
+endif
 
 .PHONY: all clean
 
