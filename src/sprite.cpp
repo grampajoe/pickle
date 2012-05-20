@@ -84,29 +84,22 @@ texture* Sprite::texture_from_surface(SDL_Surface* src)
 	if (surface->format->BytesPerPixel == 4)
 	{
 		if (surface->format->Rmask == 0x000000ff)
-		{
 			format = GL_RGBA;
-			type  = GL_UNSIGNED_INT_8_8_8_8;
-		}
 		else
-		{
 			format = GL_BGRA;
-			type  = GL_UNSIGNED_INT_8_8_8_8_REV;
-		}
 	}
 	else
 	{
 		if (surface->format->Rmask == 0x000000ff)
-		{
 			format = GL_RGB;
-			type  = GL_UNSIGNED_INT_8_8_8_8;
-		}
 		else
-		{
 			format = GL_BGR;
-			type  = GL_UNSIGNED_INT_8_8_8_8_REV;
-		}
 	}
+
+	if (SDL_BYTEORDER == SDL_BIG_ENDIAN)
+		type = GL_UNSIGNED_INT_8_8_8_8;
+	else
+		type = GL_UNSIGNED_INT_8_8_8_8_REV;
 
 	glTexImage2D(GL_TEXTURE_2D, 0, surface->format->BytesPerPixel, surface->w,
 			surface->h, 0, format, type,
