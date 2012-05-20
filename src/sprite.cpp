@@ -109,7 +109,7 @@ texture* Sprite::texture_from_surface(SDL_Surface* src)
 	}
 
 	glTexImage2D(GL_TEXTURE_2D, 0, surface->format->BytesPerPixel, surface->w,
-			surface->h, 0, format, GL_UNSIGNED_INT_8_8_8_8_REV,
+			surface->h, 0, format, type,
 			surface->pixels);
 
 	SDL_UnlockSurface(surface);
