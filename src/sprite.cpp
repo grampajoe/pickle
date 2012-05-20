@@ -57,13 +57,14 @@ SDL_Surface* Sprite::load_surface(const char* filename)
 texture* Sprite::texture_from_surface(SDL_Surface* surface)
 {
 	texture* new_tex = (texture*)malloc(sizeof(texture));
+	GLenum format;
 
 	SDL_LockSurface(surface);
 
 	new_tex->width = surface->w;
 	new_tex->height = surface->h;
 
-	/* Convert SDL surface to OpenGL texture. */
+	// Convert SDL surface to OpenGL texture.
 	glGenTextures(1, &new_tex->name);
 	glBindTexture(GL_TEXTURE_2D, new_tex->name);
 
@@ -80,8 +81,23 @@ texture* Sprite::texture_from_surface(SDL_Surface* surface)
 	glPixelStorei(GL_UNPACK_SKIP_PIXELS, 0);
 	glPixelStorei(GL_UNPACK_SKIP_ROWS, 0);
 
-	glTexImage2D(GL_TEXTURE_2D, 0, 4, surface->w,
-			surface->h, 0, GL_BGRA, GL_UNSIGNED_BYTE,
+	if (surface->format->BytesPerPixel == 4)
+	{
+		if (surface->format->Rshift == 0x000000ff)
+			format = GL_RGBA;
+		else
+			format = GL_BGRA;
+	}
+	else
+	{
+		if (surface->format->Rshift == 0x000000ff)
+			format = GL_RGB;
+		else
+			format = GL_BGR;
+	}
+
+	glTexImage2D(GL_TEXTURE_2D, 0, surface->format->BytesPerPixel, surface->w,
+			surface->h, 0, format, GL_UNSIGNED_BYTE,
 			surface->pixels);
 
 	SDL_UnlockSurface(surface);
