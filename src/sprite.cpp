@@ -83,14 +83,14 @@ texture* Sprite::texture_from_surface(SDL_Surface* surface)
 
 	if (surface->format->BytesPerPixel == 4)
 	{
-		if (surface->format->Rshift == 0x000000ff)
+		if (surface->format->Rmask == 0x000000ff)
 			format = GL_RGBA;
 		else
 			format = GL_BGRA;
 	}
 	else
 	{
-		if (surface->format->Rshift == 0x000000ff)
+		if (surface->format->Rmask == 0x000000ff)
 			format = GL_RGB;
 		else
 			format = GL_BGR;
