@@ -26,7 +26,7 @@ class Sprite
 		~Sprite();
 
 		static SDL_Surface* load_surface(const char* filename);
-		static texture* texture_from_surface(SDL_Surface* surface);
+		static texture* texture_from_surface(SDL_Surface* src);
 		static texture* load_texture(const char* filename);
 
 		static Sprite* from_surface(SDL_Surface* surface);

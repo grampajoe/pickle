@@ -40,7 +40,6 @@ Sprite::Sprite(const char* filename)
 SDL_Surface* Sprite::load_surface(const char* filename)
 {
 	SDL_Surface* surf_temp;
-	SDL_Surface* surf_display;
 
 	std::string location = PREFIX MEDIA_PREFIX IMAGE_DIR;
 	location += filename;
@@ -48,16 +47,17 @@ SDL_Surface* Sprite::load_surface(const char* filename)
 	if ((surf_temp = IMG_Load(location.c_str())) == NULL)
 		return NULL;
 
-	surf_display = SDL_DisplayFormatAlpha(surf_temp);
-	SDL_FreeSurface(surf_temp);
-
-	return surf_display;
+	return surf_temp;
 }
 
-texture* Sprite::texture_from_surface(SDL_Surface* surface)
+texture* Sprite::texture_from_surface(SDL_Surface* src)
 {
 	texture* new_tex = (texture*)malloc(sizeof(texture));
-	GLenum format;
+	GLenum format, type;
+
+	SDL_Surface* surface = SDL_DisplayFormatAlpha(src);
+
+	SDL_FreeSurface(src);
 
 	SDL_LockSurface(surface);
 
@@ -84,20 +84,32 @@ texture* Sprite::texture_from_surface(SDL_Surface* surface)
 	if (surface->format->BytesPerPixel == 4)
 	{
 		if (surface->format->Rmask == 0x000000ff)
+		{
 			format = GL_RGBA;
+			type  = GL_UNSIGNED_INT_8_8_8_8;
+		}
 		else
+		{
 			format = GL_BGRA;
+			type  = GL_UNSIGNED_INT_8_8_8_8_REV;
+		}
 	}
 	else
 	{
 		if (surface->format->Rmask == 0x000000ff)
+		{
 			format = GL_RGB;
+			type  = GL_UNSIGNED_INT_8_8_8_8;
+		}
 		else
+		{
 			format = GL_BGR;
+			type  = GL_UNSIGNED_INT_8_8_8_8_REV;
+		}
 	}
 
 	glTexImage2D(GL_TEXTURE_2D, 0, surface->format->BytesPerPixel, surface->w,
-			surface->h, 0, format, GL_UNSIGNED_BYTE,
+			surface->h, 0, format, GL_UNSIGNED_INT_8_8_8_8_REV,
 			surface->pixels);
 
 	SDL_UnlockSurface(surface);
