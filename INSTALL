@@ -14,18 +14,8 @@ INSTALLATION
 	$ make
 	$ make install
 
-The default installation directories are /usr/local/bin for the executable and
-/usr/local/share/pickle for media files. To install to a custom location, set 
-the PREFIX and MEDIA_PREFIX environment variables. MEDIA_PREFIX is relative to
-PREFIX. In bash:
+The default installation directory is /usr. To install to a custom location,
+set the DESTDIR environment variable:
 
-	$ export PREFIX=/path/to/game
-	$ export MEDIA_PREFIX=/media/path
-
-The executable would then be found in /path/to/game/bin/, and media files like
-fonts and images would be in /path/to/game/media/path/.
-
-You can also set prefixes when calling make:
-
-	$ make PREFIX=/path/to/game MEDIA_PREFIX=/media/path
-	$ make install PREFIX=/path/to/game MEDIA_PREFIX=/media/path
+	$ make DESTDIR=/path/to/game
+	$ make DESTDIR=/path/to/game install
