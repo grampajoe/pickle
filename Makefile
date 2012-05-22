@@ -18,7 +18,7 @@ install: all
 	install -m 0644 fonts/* $(DATADIR)/fonts/
 
 uninstall:
-	rm -f $(BINDIR)$(BINARY)
+	rm -f $(BINDIR)/$(BINARY)
 	rm -rf $(DATADIR)
 
 clean:
