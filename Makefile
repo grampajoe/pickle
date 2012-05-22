@@ -1,23 +1,25 @@
-PREFIX ?= /usr/local
-MEDIA_PREFIX ?= /share/pickle
+DESTDIR =
+PREFIX := $(DESTDIR)/usr
+BINDIR := $(PREFIX)/bin
+DATADIR := $(PREFIX)/share/pickle
 BINARY := pickle
 
 .PHONY: all install clean
 
 all:
-	$(MAKE) -C src
+	$(MAKE) -C src PREFIX=$(PREFIX) DATADIR=$(DATADIR)
 
 install: all
-	install -m 0755 -d $(PREFIX)/bin/
-	install -m 0755 -d $(PREFIX)$(MEDIA_PREFIX)/images/
-	install -m 0755 -d $(PREFIX)$(MEDIA_PREFIX)/fonts/
-	install -m 0755 src/$(BINARY) $(PREFIX)/bin/
-	install -m 0644 images/* $(PREFIX)$(MEDIA_PREFIX)/images/
-	install -m 0644 fonts/* $(PREFIX)$(MEDIA_PREFIX)/fonts/
+	install -m 0755 -d $(BINDIR)
+	install -m 0755 -d $(DATADIR)/images/
+	install -m 0755 -d $(DATADIR)/fonts/
+	install -m 0755 src/$(BINARY) $(BINDIR)
+	install -m 0644 images/* $(DATADIR)/images/
+	install -m 0644 fonts/* $(DATADIR)/fonts/
 
 uninstall:
-	rm -f $(PREFIX)/bin/$(BINARY)
-	rm -rf $(PREFIX)$(MEDIA_PREFIX)
+	rm -f $(BINDIR)$(BINARY)
+	rm -rf $(DATADIR)
 
 clean:
 	$(MAKE) -C src clean

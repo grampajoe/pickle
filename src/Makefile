@@ -1,12 +1,9 @@
-PREFIX ?= /usr/local
-MEDIA_PREFIX ?= /share/pickle
-
 SOURCES   := $(wildcard *.cpp)
 OBJECTS   := $(subst .cpp,.o,$(SOURCES))
 DEPS      := $(subst .o,.d,$(OBJECTS))
 BINARY    := pickle
 UNAME     := $(shell uname)
-CXXFLAGS  += -DPREFIX=\"$(PREFIX)\" -DMEDIA_PREFIX=\"$(MEDIA_PREFIX)\" -ggdb3 -Wall `sdl-config --cflags`
+CXXFLAGS  += -DPREFIX=\"$(PREFIX)\" -DMEDIA_PREFIX=\"/share/pickle\" -ggdb3 -Wall `sdl-config --cflags`
 LDLIBS    := -lstdc++ -lSDL_image -lSDL_ttf -lGL `sdl-config --libs`
 
 ifeq ($(UNAME),Darwin)
