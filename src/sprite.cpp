@@ -41,7 +41,7 @@ SDL_Surface* Sprite::load_surface(const char* filename)
 {
 	SDL_Surface* surf_temp;
 
-	std::string location = PREFIX MEDIA_PREFIX IMAGE_DIR;
+	std::string location = DATADIR IMAGE_DIR;
 	location += filename;
 
 	if ((surf_temp = IMG_Load(location.c_str())) == NULL)

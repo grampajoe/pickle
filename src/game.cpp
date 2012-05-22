@@ -107,8 +107,8 @@ bool Game::init()
 
 	cursor = new Cursor(&score, &lives);
 
-	if ((label_font = TTF_OpenFont(PREFIX MEDIA_PREFIX "/fonts/FredokaOne-Regular.ttf", 16)) == NULL ||
-			(label_font_big = TTF_OpenFont(PREFIX MEDIA_PREFIX "/fonts/FredokaOne-Regular.ttf", 32)) == NULL)
+	if ((label_font = TTF_OpenFont(DATADIR "/fonts/FredokaOne-Regular.ttf", 16)) == NULL ||
+			(label_font_big = TTF_OpenFont(DATADIR "/fonts/FredokaOne-Regular.ttf", 32)) == NULL)
 		return false;
 
 	score_label = new Label(label_font, "0", WINDOW_MARGIN + 10 + full_jar_sprite->width,
