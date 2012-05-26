@@ -48,6 +48,19 @@ h1, h2, div
 	clear:both;
 }
 
+#fork
+{
+	display:block;
+	width:149px;
+	height:0;
+	padding-top:149px;
+	overflow:hidden;
+	position:absolute;
+	top:0;
+	right:0;
+	background:transparent url('https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png') top center no-repeat;
+}
+
 .info
 {
 	margin:0 auto 32px;
