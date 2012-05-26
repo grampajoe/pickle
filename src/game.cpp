@@ -214,13 +214,10 @@ int Game::loop()
 
 	change_state(GAME_TITLE);
 
-	while (running)
-	{
-		while (SDL_PollEvent(&event))
-			handle(&event);
+	render_timer_id = SDL_AddTimer(RENDER_INTERVAL, render_timer, NULL);
 
-		render();
-	}
+	while (SDL_WaitEvent(&event) != 0 && running)
+		handle(&event);
 
 	cleanup();
 
@@ -248,6 +245,9 @@ void Game::handle(SDL_Event* event)
 					break;
 				case UNSCORE_TIMER:
 					background->unscore();
+					break;
+				case RENDER_TIMER:
+					render();
 					break;
 			}
 			break;
@@ -477,13 +477,13 @@ void Game::cleanup()
 	TTF_Quit();
 }
 
-Uint32 update_timer(Uint32 interval, void* param)
+void push_timer_event(int code)
 {
 	SDL_Event event;
 	SDL_UserEvent userevent;
-
+	
 	userevent.type = SDL_USEREVENT;
-	userevent.code = UPDATE_TIMER;
+	userevent.code = code;
 	userevent.data1 = NULL;
 	userevent.data2 = NULL;
 
@@ -491,39 +491,30 @@ Uint32 update_timer(Uint32 interval, void* param)
 	event.user = userevent;
 
 	SDL_PushEvent(&event);
+
+	return;
+}
+
+Uint32 update_timer(Uint32 interval, void* param)
+{
+	push_timer_event(UPDATE_TIMER);
 	return interval;
 }
 
 Uint32 drop_timer(Uint32 interval, void* param)
 {
-	SDL_Event event;
-	SDL_UserEvent userevent;
-
-	userevent.type = SDL_USEREVENT;
-	userevent.code = DROP_TIMER;
-	userevent.data1 = NULL;
-	userevent.data2 = NULL;
-
-	event.type = SDL_USEREVENT;
-	event.user = userevent;
-
-	SDL_PushEvent(&event);
+	push_timer_event(DROP_TIMER);
 	return *((Uint32*)param);
 }
 
 Uint32 speedup_timer(Uint32 interval, void* param)
 {
-	SDL_Event event;
-	SDL_UserEvent userevent;
+	push_timer_event(SPEEDUP_TIMER);
+	return interval;
+}
 
-	userevent.type = SDL_USEREVENT;
-	userevent.code = SPEEDUP_TIMER;
-	userevent.data1 = NULL;
-	userevent.data2 = NULL;
-
-	event.type = SDL_USEREVENT;
-	event.user = userevent;
-
-	SDL_PushEvent(&event);
+Uint32 render_timer(Uint32 interval, void* param)
+{
+	push_timer_event(RENDER_TIMER);
 	return interval;
 }

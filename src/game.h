@@ -11,13 +11,9 @@
 #include "thing.h"
 #include "label.h"
 
-#define UPDATE_TIMER 1
-#define DROP_TIMER 2
-#define SPEEDUP_TIMER 3
-
-#define GAME_TITLE 0
+#define GAME_TITLE   0
 #define GAME_PLAYING 1
-#define GAME_LOSE 2
+#define GAME_LOSE    2
 
 class Game
 {
@@ -45,6 +41,7 @@ class Game
 		SDL_TimerID update_timer_id;
 		SDL_TimerID drop_timer_id;
 		SDL_TimerID speedup_timer_id;
+		SDL_TimerID render_timer_id;
 
 		Uint32 drop_interval;
 		Uint32 max_drop;
@@ -79,8 +76,10 @@ class Game
 		float pickle_prob;
 };
 
+void push_timer_event(int code);
 Uint32 update_timer(Uint32 interval, void* param);
 Uint32 drop_timer(Uint32 interval, void* param);
 Uint32 speedup_timer(Uint32 interval, void* param);
+Uint32 render_timer(Uint32 interval, void* param);
 
 #endif

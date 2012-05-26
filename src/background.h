@@ -1,9 +1,6 @@
 #ifndef PICKLE_BACKGROUND_H_
 #define PICKLE_BACKGROUND_H_
 
-#define UNHURT_TIMER 4
-#define UNSCORE_TIMER 5
-
 class Background
 {
 	private:

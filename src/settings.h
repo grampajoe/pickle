@@ -15,6 +15,7 @@
 #define UPDATE_INTERVAL  1000.0/60
 #define DROP_INTERVAL    1000
 #define SPEEDUP_INTERVAL 10000
+#define RENDER_INTERVAL  1000.0/60
 
 #define PICKLE_PROB_REDUCTION 0.95
 #define PICKLE_PROB_MIN       0.1
@@ -46,6 +47,14 @@
 #define BACKGROUND_RAY_LENGTH     WINDOW_WIDTH
 #define BACKGROUND_ORIGIN_X       320
 #define BACKGROUND_ORIGIN_Y       -50
+
+// Timers
+#define UPDATE_TIMER  1
+#define DROP_TIMER    2
+#define SPEEDUP_TIMER 3
+#define RENDER_TIMER  4
+#define UNHURT_TIMER  5
+#define UNSCORE_TIMER 6
 
 // Other
 #define SPLAT_SPEED 100 // Pixels/sec
