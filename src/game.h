@@ -41,7 +41,6 @@ class Game
 		SDL_TimerID update_timer_id;
 		SDL_TimerID drop_timer_id;
 		SDL_TimerID speedup_timer_id;
-		SDL_TimerID render_timer_id;
 
 		Uint32 drop_interval;
 		Uint32 max_drop;
@@ -80,6 +79,5 @@ void push_timer_event(int code);
 Uint32 update_timer(Uint32 interval, void* param);
 Uint32 drop_timer(Uint32 interval, void* param);
 Uint32 speedup_timer(Uint32 interval, void* param);
-Uint32 render_timer(Uint32 interval, void* param);
 
 #endif

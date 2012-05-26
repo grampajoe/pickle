@@ -214,10 +214,13 @@ int Game::loop()
 
 	change_state(GAME_TITLE);
 
-	render_timer_id = SDL_AddTimer(RENDER_INTERVAL, render_timer, NULL);
+	while (running)
+	{
+		while (SDL_PollEvent(&event))
+			handle(&event);
 
-	while (SDL_WaitEvent(&event) != 0 && running)
-		handle(&event);
+		render();
+	}
 
 	cleanup();
 
@@ -245,9 +248,6 @@ void Game::handle(SDL_Event* event)
 					break;
 				case UNSCORE_TIMER:
 					background->unscore();
-					break;
-				case RENDER_TIMER:
-					render();
 					break;
 			}
 			break;
