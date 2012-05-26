@@ -523,9 +523,3 @@ Uint32 speedup_timer(Uint32 interval, void* param)
 	push_timer_event(SPEEDUP_TIMER);
 	return interval;
 }
-
-Uint32 render_timer(Uint32 interval, void* param)
-{
-	push_timer_event(RENDER_TIMER);
-	return interval;
-}

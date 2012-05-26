@@ -51,9 +51,8 @@
 #define UPDATE_TIMER  1
 #define DROP_TIMER    2
 #define SPEEDUP_TIMER 3
-#define RENDER_TIMER  4
-#define UNHURT_TIMER  5
-#define UNSCORE_TIMER 6
+#define UNHURT_TIMER  4
+#define UNSCORE_TIMER 5
 
 // Other
 #define SPLAT_SPEED 100 // Pixels/sec
