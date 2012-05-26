@@ -24,7 +24,7 @@
 
 #define ADDITIONAL_DROP_PROB 0.01
 
-#define THING_GRAVITY   -200 // Pixels/sec^2
+#define THING_GRAVITY   -100 // Pixels/sec^2
 #define THING_MIN_SCALE 0.7
 #define THING_FADE_RATE 5
 
