@@ -17,8 +17,8 @@ Game::Game()
 	window.h = WINDOW_HEIGHT;
 
 	update_timer_id = NULL;
-	drop_timer_id = NULL;
-	speedup_timer_id = NULL;
+
+	pause_time = 0;
 }
 
 bool Game::init()
@@ -107,8 +107,8 @@ bool Game::init()
 
 	cursor = new Cursor(&score, &lives);
 
-	if ((label_font = TTF_OpenFont(PREFIX MEDIA_PREFIX "/fonts/FredokaOne-Regular.ttf", 16)) == NULL ||
-			(label_font_big = TTF_OpenFont(PREFIX MEDIA_PREFIX "/fonts/FredokaOne-Regular.ttf", 32)) == NULL)
+	if ((label_font = TTF_OpenFont(DATADIR "/fonts/FredokaOne-Regular.ttf", 16)) == NULL ||
+			(label_font_big = TTF_OpenFont(DATADIR "/fonts/FredokaOne-Regular.ttf", 32)) == NULL)
 		return false;
 
 	score_label = new Label(label_font, "0", WINDOW_MARGIN + 10 + full_jar_sprite->width,
@@ -151,12 +151,6 @@ void Game::change_state(int new_state)
 	if (update_timer_id != NULL)
 		SDL_RemoveTimer(update_timer_id);
 
-	if (drop_timer_id != NULL)
-		SDL_RemoveTimer(drop_timer_id);
-
-	if (speedup_timer_id != NULL)
-		SDL_RemoveTimer(speedup_timer_id);
-
 	background->unhurt();
 	background->unscore();
 
@@ -174,10 +168,8 @@ void Game::change_state(int new_state)
 			reset();
 			score_label->set_text(0);
 
-			last_update = SDL_GetTicks();
+			last_update = last_drop = last_speedup = SDL_GetTicks();
 			update_timer_id = SDL_AddTimer(UPDATE_INTERVAL, update_timer, NULL);
-			drop_timer_id = SDL_AddTimer(drop_interval, drop_timer, &drop_interval);
-			speedup_timer_id = SDL_AddTimer(SPEEDUP_INTERVAL, speedup_timer, NULL);
 			break;
 
 		case GAME_LOSE:
@@ -237,12 +229,6 @@ void Game::handle(SDL_Event* event)
 				case UPDATE_TIMER:
 					update();
 					break;
-				case DROP_TIMER:
-					drop();
-					break;
-				case SPEEDUP_TIMER:
-					speed_up();
-					break;
 				case UNHURT_TIMER:
 					background->unhurt();
 					break;
@@ -299,13 +285,17 @@ void Game::handle(SDL_Event* event)
 
 void Game::update()
 {
-	Uint32 dt = SDL_GetTicks() - last_update;
+	Uint32 t = SDL_GetTicks(), dt = t - last_update;
 	GLdouble secs = (GLdouble)dt/1000.0;
 
-	last_update += dt;
+	last_update = t;
 
 	if (paused)
+	{
+		// Keep track of the amount of time spent paused.
+		pause_time += dt;
 		return;
+	}
 
 	std::list<Thing*>::iterator it;
 	std::list<Thing*> remove;
@@ -350,6 +340,18 @@ void Game::update()
 					remove.push_back(*it);
 				}
 				(*it)->update(secs);
+			}
+
+			if (t - last_drop >= drop_interval)
+			{
+				last_drop = t;
+				drop();
+			}
+
+			if (t - last_speedup >= SPEEDUP_INTERVAL)
+			{
+				last_speedup = t;
+				speed_up();
 			}
 
 			cursor->update(secs);
@@ -424,6 +426,23 @@ void Game::toggle_pause()
 	if (state == GAME_PLAYING)
 	{
 		paused = !paused;
+
+		if (paused)
+		{
+			pause_time = 0;
+
+			SDL_WM_GrabInput(SDL_GRAB_OFF);
+			SDL_ShowCursor(1);
+		}
+		else
+		{
+			// Drops and speedups ignore pause time.
+			last_drop += pause_time;
+			last_speedup += pause_time;
+
+			SDL_WM_GrabInput(SDL_GRAB_ON);
+			SDL_ShowCursor(0);
+		}
 	}
 }
 
@@ -477,53 +496,26 @@ void Game::cleanup()
 	TTF_Quit();
 }
 
+void push_timer_event(int code)
+{
+	SDL_Event event;
+	SDL_UserEvent userevent;
+	
+	userevent.type = SDL_USEREVENT;
+	userevent.code = code;
+	userevent.data1 = NULL;
+	userevent.data2 = NULL;
+
+	event.type = SDL_USEREVENT;
+	event.user = userevent;
+
+	SDL_PushEvent(&event);
+
+	return;
+}
+
 Uint32 update_timer(Uint32 interval, void* param)
 {
-	SDL_Event event;
-	SDL_UserEvent userevent;
-
-	userevent.type = SDL_USEREVENT;
-	userevent.code = UPDATE_TIMER;
-	userevent.data1 = NULL;
-	userevent.data2 = NULL;
-
-	event.type = SDL_USEREVENT;
-	event.user = userevent;
-
-	SDL_PushEvent(&event);
-	return interval;
-}
-
-Uint32 drop_timer(Uint32 interval, void* param)
-{
-	SDL_Event event;
-	SDL_UserEvent userevent;
-
-	userevent.type = SDL_USEREVENT;
-	userevent.code = DROP_TIMER;
-	userevent.data1 = NULL;
-	userevent.data2 = NULL;
-
-	event.type = SDL_USEREVENT;
-	event.user = userevent;
-
-	SDL_PushEvent(&event);
-	return *((Uint32*)param);
-}
-
-Uint32 speedup_timer(Uint32 interval, void* param)
-{
-	SDL_Event event;
-	SDL_UserEvent userevent;
-
-	userevent.type = SDL_USEREVENT;
-	userevent.code = SPEEDUP_TIMER;
-	userevent.data1 = NULL;
-	userevent.data2 = NULL;
-
-	event.type = SDL_USEREVENT;
-	event.user = userevent;
-
-	SDL_PushEvent(&event);
+	push_timer_event(UPDATE_TIMER);
 	return interval;
 }

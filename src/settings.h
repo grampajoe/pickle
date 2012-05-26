@@ -24,7 +24,7 @@
 
 #define ADDITIONAL_DROP_PROB 0.01
 
-#define THING_GRAVITY   -200 // Pixels/sec^2
+#define THING_GRAVITY   -100 // Pixels/sec^2
 #define THING_MIN_SCALE 0.7
 #define THING_FADE_RATE 5
 
@@ -46,6 +46,11 @@
 #define BACKGROUND_RAY_LENGTH     WINDOW_WIDTH
 #define BACKGROUND_ORIGIN_X       320
 #define BACKGROUND_ORIGIN_Y       -50
+
+// Timers
+#define UPDATE_TIMER  1
+#define UNHURT_TIMER  2
+#define UNSCORE_TIMER 3
 
 // Other
 #define SPLAT_SPEED 100 // Pixels/sec
