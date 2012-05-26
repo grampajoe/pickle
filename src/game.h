@@ -26,6 +26,9 @@ class Game
 		SDL_Rect window;
 
 		Uint32 last_update;
+		Uint32 last_drop;
+		Uint32 last_speedup;
+		Uint32 pause_time;
 
 		Cursor* cursor;
 
@@ -39,8 +42,6 @@ class Game
 		int state;
 
 		SDL_TimerID update_timer_id;
-		SDL_TimerID drop_timer_id;
-		SDL_TimerID speedup_timer_id;
 
 		Uint32 drop_interval;
 		Uint32 max_drop;
@@ -77,7 +78,5 @@ class Game
 
 void push_timer_event(int code);
 Uint32 update_timer(Uint32 interval, void* param);
-Uint32 drop_timer(Uint32 interval, void* param);
-Uint32 speedup_timer(Uint32 interval, void* param);
 
 #endif
