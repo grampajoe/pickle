@@ -424,6 +424,17 @@ void Game::toggle_pause()
 	if (state == GAME_PLAYING)
 	{
 		paused = !paused;
+
+		if (paused)
+		{
+			SDL_WM_GrabInput(SDL_GRAB_OFF);
+			SDL_ShowCursor(1);
+		}
+		else
+		{
+			SDL_WM_GrabInput(SDL_GRAB_ON);
+			SDL_ShowCursor(0);
+		}
 	}
 }
 
