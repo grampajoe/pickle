@@ -4,7 +4,7 @@ DEPS      := $(subst .o,.d,$(OBJECTS))
 BINARY    := pickle
 UNAME     := $(shell uname)
 CXXFLAGS  += -DPREFIX=\"$(PREFIX)\" -DDATADIR=\"$(DATADIR)\" -ggdb3 -Wall `sdl-config --cflags`
-LDLIBS    := -lstdc++ -lSDL_image -lSDL_ttf -lGL `sdl-config --libs`
+LDLIBS    := -lm -lstdc++ -lSDL_image -lSDL_ttf -lGL `sdl-config --libs`
 
 ifeq ($(UNAME),Darwin)
 	LDLIBS += -L/System/Library/Frameworks/OpenGL.framework/Libraries/
