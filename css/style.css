@@ -90,13 +90,15 @@ p
 	line-height:0;
 }
 
-.left a
+.left .screenshot,
+.left iframe
 {
 	float:left;
 	margin-right:16px;
 }
 
-.right a
+.right .screenshot,
+.right iframe
 {
 	float:right;
 	margin-left:16px;
