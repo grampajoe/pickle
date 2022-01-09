@@ -3,3 +3,4 @@ build/
 *.swp
 *.o
 src/pickle
+.DS_Store
